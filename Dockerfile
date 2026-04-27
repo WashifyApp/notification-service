@@ -7,7 +7,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Stage 2: Minimal Runtime Environment
+# Stage 2: Minimal Runtime Environment 
 FROM python:3.9-slim
 # Create a non-root user for security
 RUN groupadd -r appuser && useradd -r -g appuser appuser
